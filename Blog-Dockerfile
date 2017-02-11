@@ -1,10 +1,9 @@
-FROM centos-dev:base-v1.2
+FROM yangxikun/centos-dev:base-v1.2
 
 MAINTAINER Rokety Yang <yangrokety@gmail.com>
 
-RUN yum -y install ruby ruby-devel gem samba samba-client
+RUN yum -y install ruby ruby-devel gem
 RUN gem sources -r https://rubygems.org/;gem sources -a https://ruby.taobao.org/
-RUN gem install jekyll execjs therubyracer rake -V
-RUN cd ~;git clone https://github.com/yangxikun/yangxikun.github.com.git
+RUN gem install jekyll execjs therubyracer rake jekyll-paginate -V
 
 CMD ["/bin/zsh"]
