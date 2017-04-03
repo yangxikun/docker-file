@@ -1,4 +1,4 @@
-FROM yangxikun/centos-dev:base-v1.4
+FROM yangxikun/centos-dev:base-v1.5
 
 MAINTAINER Rokety Yang <yangrokety@gmail.com>
 
